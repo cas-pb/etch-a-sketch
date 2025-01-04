@@ -33,6 +33,7 @@ const makeGrid = (size) => {
 
 makeGrid(16);
 
+// replace existing grid and replace with new grid size depend on number
 function makeButton() {
   button.addEventListener('click', (event) => {
     let newGridSize = prompt('Enter a number between 1 to 100');
@@ -50,3 +51,13 @@ function makeButton() {
 }
 
 makeButton();
+
+// resets grid to 16 x 16 squares
+function resetGrid() {
+  const resetGrid = document.querySelector('.reset-grid');
+  resetGrid.addEventListener('click', (event) => {
+    makeGrid(16)
+  })
+}
+
+resetGrid();
