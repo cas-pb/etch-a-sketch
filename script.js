@@ -4,11 +4,14 @@ const divContainer = document.querySelector(".container");
 const button = document.querySelector('.create-grid');
 
 // create 16 x 16 grid
-const makeGrid = () => {
+const makeGrid = (size) => {
 
   // prevent grid from stacking up when entering a number when prompted
   divContainer.innerHTML = '';
-  for (let i = 0; i < 16 * 16; i++) {
+  // div size
+  divSize = 850 / size;
+
+  for (let i = 0; i < size * size; i++) {
     // create div
     const div = document.createElement("div");
     div.classList.add("div");
