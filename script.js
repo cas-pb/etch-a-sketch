@@ -15,6 +15,10 @@ const makeGrid = (size) => {
     // create div
     const div = document.createElement("div");
     div.classList.add("div");
+    div.style.width = `${divSize}px`;
+    div.style.height = `${divSize}px`;
+    // include padding and border to keep box shape
+    div.style.boxSizing = 'border-box';
     divContainer.appendChild(div);
 
   // selects newly created div
@@ -27,4 +31,4 @@ const makeGrid = (size) => {
   }
 };
 
-makeGrid();
+makeGrid(16);
