@@ -3,6 +3,17 @@ console.log("hello world");
 const divContainer = document.querySelector(".container");
 const button = document.querySelector('.create-grid');
 
+// random color
+function randomColor() {
+  
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
+  
+  
+}
+
 // create 16 x 16 grid
 const makeGrid = (size) => {
 
@@ -25,10 +36,14 @@ const makeGrid = (size) => {
     const divGrid = document.querySelectorAll("div");
 
     div.addEventListener("mouseenter", (event) => {
-      div.style.backgroundColor = "#f88b69";
+
+      div.style.backgroundColor = randomColor();
+      // "#f88b69"
       console.log("helo");
     });
   }
+
+  
 };
 
 makeGrid(16);
